@@ -1,0 +1,147 @@
+.questions{
+	margin-top: em(189);
+	&__container{
+		display: flex;
+		flex-direction: column;
+	}
+	&__title{
+		font-family: 'Proxima-SemiBold';
+		font-size: em(70);
+		color: #3052D8;
+		line-height: 1.4;
+	}
+	&__subtitle{
+		margin-top: em(60);
+		font-family: 'Proxima-SemiBold';
+		font-size: em(36);
+		line-height: 1.3;
+		color: #08113F;
+		&.mobile{
+			display: none;
+		}
+		
+	}
+	.swiper{
+		width: 100%;
+		margin-top: em(47);
+	}
+	.swiper-wrapper{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__content{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: em(14);
+		border-radius: em(10);
+		height: em(152);
+		width: em(209);
+		background-color: #3052D8;
+		color: #E1E8F8;
+		transition: .2s ease-in-out;
+		&.active{
+			background-color: #E1E8F8;
+			color: #08113F;
+			svg{
+				path{
+					transition: .2s ease-in-out;
+					fill: #08113F;
+				}
+				g{
+					path{
+						transition: .2s ease-in-out;
+						fill: #08113F;
+					}
+				}
+			}
+		}
+		
+		&:hover{
+			background-color: #E1E8F8;
+			color: #08113F;
+			svg{
+				path{
+					transition: .2s ease-in-out;
+					fill: #08113F;
+				}
+				g{
+					path{
+						transition: .2s ease-in-out;
+						fill: #08113F;
+					}
+				}
+			}
+		}
+	}
+	&__text{
+		font-family: 'Proxima-SemiBold';
+		font-size: em(22);
+		line-height: 1.3;
+	}
+	&__icon{
+		width: em(50);
+		height: em(50);
+		svg{
+			width: em(50);
+			height: em(50);
+		}
+	}
+}
+
+@media (max-width: 900px){
+	.questions__title{
+		font-size: em(80);
+	}
+	.questions__subtitle{
+		font-size: em(40);
+	}
+	.questions__content{
+		height: em(192);
+		width: em(259);
+	}
+	.questions__icon{
+		svg{
+			width: em(70);
+			height: em(70);
+		}
+	}
+	.questions__text{
+		font-size: em(25);
+	}
+}
+@media (max-width: 600px){
+	.questions__title{
+		margin-top: em(30);
+		font-size: em(140);
+		font-family: 'Proxima-Bold';
+	}
+	.questions__subtitle{
+		font-size: em(80);
+		font-family: 'Proxima-Bold';
+		margin-top: em(40);
+		&.desktop{
+			display: none;
+		}
+		&.mobile{
+			display: block;
+		}
+	}
+	.questions__content{
+		height: em(372);
+		width: em(599);
+		padding: em(20);
+	}
+	.questions__text{
+		font-size: em(60);
+	}
+	.questions__icon{
+		svg{
+			width: em(120);
+			height: em(120);
+		}
+	}
+}
+

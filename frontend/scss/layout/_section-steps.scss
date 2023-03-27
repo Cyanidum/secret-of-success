@@ -1,0 +1,140 @@
+.steps{
+	position: relative;
+	margin-top: em(152);
+	&__container{
+		display: flex;
+		flex-direction: column;
+	}
+	&__title{
+		font-size: em(70);
+		font-family: 'Proxima-Semibold';
+		color: #3052D8;
+		line-height: 1.4;
+	}
+	&__procedure{
+		position: relative;
+		margin-top: em(60);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	&__procedure_line{
+		position: absolute;
+		top: em(25);
+		height: em(2);
+		width: 85%;
+		background-color: #3052D8;
+	}
+	&__procedure_content{
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		width: em(222);
+		z-index: 5;
+	}
+	&__procedure_number{
+		display: flex;
+		font-family: 'Proxima-Semibold';
+		align-items: center;
+		justify-content: center;
+		color: #FFFFFF;
+		padding: em(13.08) em(15.98) em(10.91) em(14);
+		background-color: #3052D8;
+		border-radius: em(50);
+		width: em(50.98);
+		height: em(51);
+	}
+	&__procedure_text{
+		position: relative;
+		margin-top: em(20);
+		font-family: 'Proxima-Regular';
+		font-size: em(22);
+		color: #08113F;
+		text-align: left;
+		line-height: 1.4;
+		span{
+			font-size: em(22);
+			line-height: 0;
+			color: #3052D8;
+		}
+		&.mobile{
+			display: none;
+		}
+		&.star{
+			left: em(13);
+			&:before{
+				position: absolute;
+				content: '*';
+				color: #3052D8;
+				font-size: em(22);
+				left: em(-10);
+			}
+		}
+	}
+}
+
+
+
+@media (max-width: 900px) {
+	
+	.steps__title{
+		font-size: em(80);
+	}
+	.steps__procedure_number{
+		width: em(61);
+		height: em(61);
+	}
+	.steps__procedure_text{
+		font-size: em(26);
+	}
+}
+@media (max-width: 600px){
+	// .border-container{
+	// 	width: 100%;
+	// }
+	.desktop{
+		display: none;
+	}
+	.steps__title{
+		font-size: em(160);
+		font-family: 'Proxima-Bold';
+		width: em(140);
+	}
+	.steps__procedure{
+		flex-direction: column;
+		row-gap: em(183);
+		margin-top: em(155);
+	}
+	.steps__procedure_clarification{
+		font-size: em(35);
+	}
+	.steps__procedure_line{
+		position: absolute;
+		transform: rotate(90deg);
+		right: em(-10);
+		width: 190%;
+		top: em(1295);
+	}
+	.steps__procedure_content{
+		display: flex;
+		align-items: flex-start;
+		flex-direction: row;
+		width: 100%;
+		column-gap: em(53);
+	}
+	.steps__procedure_text{
+		font-size: em(77);
+		margin-top: 0;
+		&.mobile{
+			display: block;
+		}
+	}
+	
+	.steps__procedure_number{
+		width: em(40);
+		height: em(40);
+		font-size: em(60);
+		padding: em(20);
+	}
+	
+}
